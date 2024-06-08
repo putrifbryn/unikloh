@@ -1,0 +1,9 @@
+nav {
+    box-shadow: -2px 18px 68px -22px rgba(0, 0, 0, 0.37);
+    -webkit-box-shadow: -2px 18px 68px -22px rgba(0, 0, 0, 0.37);
+    -moz-box-shadow: -2px 18px 68px -22px rgba(0, 0, 0, 0.37);
+  }
+  table thead tr th {
+    background-color: #fff;
+    color: #e84242;
+  }

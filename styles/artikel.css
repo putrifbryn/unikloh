@@ -1,0 +1,27 @@
+.header-artikel {
+    margin: 0 auto;
+    padding: 0.5rem 1rem;
+    /* border-bottom: 2px solid #4e4343; */
+    width: fit-content;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+.gambar-artikel {
+    margin: 3rem auto;
+    width: 15rem;
+    display: block;
+}
+
+.komen .komen-header {
+    padding: .5rem 0; 
+    border-bottom: 2px solid #4E4343; 
+    width: fit-content; 
+    font-weight: 700; 
+    margin-bottom: 2rem;
+}
+
+.komen {
+    box-sizing: border-box;
+    padding: 4rem 0;
+}

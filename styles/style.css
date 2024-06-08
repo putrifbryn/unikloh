@@ -1,0 +1,87 @@
+* {
+font-family: "Inria Sans", sans-serif;
+color: #4E4343;
+}
+
+nav {
+box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+-webkit-box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+-moz-box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+}
+
+.main {
+    box-sizing: border-box;
+    padding: 5rem 0;
+}
+
+form {
+box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+-webkit-box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+-moz-box-shadow: -2px 18px 68px -22px rgba(0,0,0,0.37);
+
+box-sizing: border-box;
+padding: 3rem;
+border-radius: 10px;
+
+width: 70%; 
+margin: auto; 
+background-color: #fff;
+}
+
+.header {
+    width: fit-content;
+    box-sizing: border-box;
+    padding: .5rem 0; 
+    margin: 0 auto 1.5rem auto; 
+    text-align: center; 
+    font-weight: bold; 
+    border-bottom: 2px solid #4E4343; 
+
+}
+
+.side-img {
+    background-image: url("../img/img1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover .signup {
+    background-color: #E84242; 
+    color: #fff; 
+    display: block; 
+    width: 7rem; 
+    border-color: #E84242;
+    transition: .3s;
+}
+
+a:hover .login {
+    background-color: #E84242; 
+    color: #fff; 
+    display: block; 
+    width: 7rem;
+    transition: .3s;
+}
+
+.signup {
+    background-color: #fff; 
+    color: #E84242; 
+    display: block; 
+    width: 7rem; 
+    border-color: #E84242;
+}
+
+.login {
+    background-color: #E84242; 
+    color: #fff; 
+    display: block; 
+    width: 7rem;
+}
+
+span {
+    color: #E84242;
+}
