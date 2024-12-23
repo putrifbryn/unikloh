@@ -49,7 +49,7 @@
       "
     >
       <div class="container-fluid" style="justify-content: space-between">
-        <a class="navbar-brand" href="../index.php">
+        <a class="navbar-brand" href="index.php">
           <img
             src="../img/UNIKLOH.svg"
             alt="Logo"

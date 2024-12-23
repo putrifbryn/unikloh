@@ -27,7 +27,7 @@
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg" style="background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 9999;">
         <div class="container-fluid" style="justify-content: space-between;">
-           <a class="navbar-brand" href="../index.html">
+           <a class="navbar-brand" href="index.php">
            <img src="../img/UNIKLOH.svg" alt="Logo" width="90" height="24" class="d-inline-block align-text-top ms-5">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -75,8 +75,8 @@ if (isset($error)) {
                 <form action="" method="post" autocomple="off">
                     
                     <div class="mb-3">
-                        <label for="uname" class="form-label">Username</label>
-                        <input type="text" class="form-control" id="uname" name="uname" placeholder="Masukkan username anda" style="background-color: #f5f5f5; border: none;" required>
+                        <label for="uname" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="uname" name="uname" placeholder="Masukkan email anda" style="background-color: #f5f5f5; border: none;" required>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Password</label>

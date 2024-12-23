@@ -120,7 +120,17 @@
             ?>
             <a href="post_detail.php?id=<?=$article['id'] ?>" style="text-decoration: none;">
                 <div class="card" style="width: 18rem; height: fit-content;">
-                  <img src="../img/<?= $article['gambar'] ?>" class="card-img-top" alt="...">
+                  <?php
+                     if($article['gambar'] == '') {
+                  ?>                           
+                        <img src="../img//no-image.png" style="width: 10rem;" class="card-img-top mx-auto" alt="...">
+                  <?php                           
+                     } else { 
+                  ?>
+                        <img src="../img/<?= $article['gambar'] ?>" class="card-img-top" alt="<?= $article['judul'] ?>">
+                  <?php
+                     }
+                  ?>
                     <div class="card-body">
                         <p class="card-text"><?= $article['judul'] ?></p>
                         <p class="card-text" style="display: flex; justify-content: space-between; font-size: .8em;"><span><?= $article['penulis'] ?></span> <span><?= $article['tanggal'] ?></span></p>

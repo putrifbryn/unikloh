@@ -18,17 +18,39 @@
         $source = $_FILES['gambar']['tmp_name'];
         $folder = '../img/' . $photo;
 
-        if (move_uploaded_file($source, $folder)) {
+        // if (move_uploaded_file($source, $folder)) {
+        //     $sql = "INSERT INTO artikel (gambar, judul, penulis, isi, tanggal) VALUES ('$photo', '$judul', '$penulis', '$isi', '$tanggal')";
+
+        //     if (mysqli_query($conn, $sql)) {
+        //         echo "<script> alert('Artikel berhasil ditambahkan'); </script>";
+        //         header("refresh:1; ../admin-page/post.php");
+        //     } else {
+        //         echo "<script> alert('Artikel gagal ditambahkan'); </script>";
+        //     }
+        // } else {
+        //     echo "<script> alert('Gagal mengupload gambar'); </script>";
+        // }
+
+        if ($photo == "") {
+            $sql = "INSERT INTO artikel (judul, penulis, isi, tanggal) VALUES ('$judul', '$penulis', '$isi', '$tanggal')";
+
+            if (mysqli_query($conn, $sql)) {
+                echo "<script> alert ('Artikel berhasil ditambahkan') </script>";
+                header("refresh:1; ../admin-page/post.php");
+            } else {
+                echo "<script> alert ('Artikel gagal ditambahkan') </script>";
+                header("refresh:1; ../admin-page/post.php");
+            }
+        } else {
             $sql = "INSERT INTO artikel (gambar, judul, penulis, isi, tanggal) VALUES ('$photo', '$judul', '$penulis', '$isi', '$tanggal')";
 
             if (mysqli_query($conn, $sql)) {
-                echo "<script> alert('Artikel berhasil ditambahkan'); </script>";
+                echo "<script> alert ('Artikel berhasil ditambahkan') </script>";
                 header("refresh:1; ../admin-page/post.php");
             } else {
-                echo "<script> alert('Artikel gagal ditambahkan'); </script>";
+                echo "<script> alert ('Artikel gagal ditambahkan') </script>";
+                header("refresh:1; ../admin-page/post.php");
             }
-        } else {
-            echo "<script> alert('Gagal mengupload gambar'); </script>";
         }
     }
 ?>
@@ -126,7 +148,7 @@
 
                     <div class="mb-3">
                         <label for="tanggal" class="form-label">Tanggal</label>
-                        <input type="date" class="form-control" name="tanggal" id="tanggal" placeholder="Masukkan tanggal upload" required>
+                        <input type="date" class="form-control" name="tanggal" id="tanggal" value=`${tanggalInput.value}` placeholder="Masukkan tanggal upload" required>
                     </div>
 
                     <div class="mb-3">
@@ -150,5 +172,19 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+    // Mendapatkan elemen input
+    const tanggalInput = document.getElementById('tanggal');
+    
+    // Mendapatkan tanggal saat ini
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0'); // Bulan (01-12)
+    const dd = String(today.getDate()).padStart(2, '0'); // Hari (01-31)
+
+    // Mengatur value ke tanggal hari ini
+    tanggalInput.value = `${yyyy}-${mm}-${dd}`;
+</script>
   </body>
 </html>

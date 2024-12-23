@@ -34,7 +34,7 @@ if ($id) {
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg" style="background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 9999;">
         <div class="container-fluid" style="justify-content: space-between;">
-           <a class="navbar-brand" href="../index.html">
+           <a class="navbar-brand" href="../index.php">
            <img src="img/UNIKLOH.svg" alt="Logo" width="90" height="24" class="d-inline-block align-text-top ms-5">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,7 +58,7 @@ if ($id) {
                     <span class="nav-link" href="">|</span>
                  </li>
                  <li class="nav-item mx-3 dropdown">
-                  <a class="nav-link dropdown-toggle me-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <a class="nav-link dropdown-toggle me-5" href="login.php" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                      LOGIN
                      </a>
                      <ul class="dropdown-menu">

@@ -46,19 +46,19 @@
                         <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter your full name here" style="background-color: #f5f5f5; border: none;" required>
                     </div>
                     <div class="mb-3">
-                        <label for="uname" class="form-label">Username <span>*</span></label>
-                        <input type="text" class="form-control" id="uname" name="uname" placeholder="Enter your username here" style="background-color: #f5f5f5; border: none;" required>
+                        <label for="uname" class="form-label">Email <span>*</span></label>
+                        <input type="email" class="form-control" id="uname" name="uname" placeholder="Enter your email here" style="background-color: #f5f5f5; border: none;" required>
                     </div>
-                    <div class="mb-3">
+                    <div class="mb-3 d-none">
                         <label for="role" class="form-label">Role <span>*</span></label>
                         <select class="form-select" aria-label="Default select example" id="role" name="roles" style="background-color: #f5f5f5; border: none;" required>
-                            <option value="User">User</option>
+                            <option value="User" selected>User</option>
                             <option value="Admin">Admin</option>
                           </select>
                     </div>
                     <div class="mb-4">
                         <label for="password" class="form-label">Password <span>*</span></label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="*****" style="background-color: #f5f5f5; border: none;" required>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="*****" style="background-color: #f5f5f5; border: none;" required min-length="8">
                     </div>
                     
                     <div class="row">

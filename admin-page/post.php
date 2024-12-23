@@ -7,8 +7,8 @@
    exit();
 }
 
-  $datas = mysqli_query($conn, "SELECT * FROM artikel");
-  $komens = mysqli_query($conn, "SELECT * FROM komen_artikel");
+  $datas = mysqli_query($conn, "SELECT * FROM artikel ORDER BY id DESC");
+  $komens = mysqli_query($conn, "SELECT * FROM komen_artikel ORDER BY id DESC");
 ?>
 
 <!doctype html>
@@ -42,7 +42,7 @@
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg" style="background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 9999;">
         <div class="container-fluid" style="justify-content: space-between;">
-           <a class="navbar-brand" href="../index.html">
+           <a class="navbar-brand" href="stok.php">
            <img src="../img/UNIKLOH.svg" alt="Logo" width="90" height="24" class="d-inline-block align-text-top ms-5">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -108,7 +108,19 @@
                ?>
                <tr>
                   <td><?= $no; ?></td>
-                  <td><img src="../img/<?= $data['gambar'] ?>" style="width: 5rem" alt="" class="mb-3"></td>
+                  <td>
+                     <?php
+                        if($data['gambar'] == '') {
+                     ?>                           
+                           <img src="../img/no-image.png" style="width: 4rem" alt="" class="mb-3">
+                     <?php                           
+                        } else { 
+                     ?>
+                           <img src="../img/<?= $data['gambar'] ?>" style="width: 5rem" alt="" class="mb-3">
+                     <?php
+                        }
+                     ?>
+                  </td>
                   <td><?= $data['judul'] ?></td>
                   <td><?= $data['penulis'] ?></td>
                   <td><?= $data['tanggal'] ?></td>

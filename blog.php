@@ -38,7 +38,7 @@
                      <a class="nav-link" href="produk.php">PRODUK</a>
                   </li>
                   <li class="nav-item ms-3">
-                     <a class="nav-link active" style="color: #E84242;" href="blog.html">BLOG</a>
+                     <a class="nav-link active" style="color: #E84242;" href="about.php">BLOG</a>
                   </li>
                   <li class="nav-item mx-3">
                      <a class="nav-link" href="about.php">TENTANG KAMI</a>

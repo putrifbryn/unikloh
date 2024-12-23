@@ -45,7 +45,7 @@
       <div class="container-fluid" style="justify-content: space-between">
         <a class="navbar-brand" href="../index.php">
           <img
-            src="../img/UNIKLOH.svg"
+            src="img/UNIKLOH.svg"
             alt="Logo"
             width="90"
             height="24"

@@ -29,7 +29,7 @@
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg" style="background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 9999;">
          <div class="container-fluid" style="justify-content: space-between;">
-            <a class="navbar-brand" href="../index.php">
+            <a class="navbar-brand" href="index.php">
             <img src="../img/UNIKLOH.svg" alt="Logo" width="90" height="24" class="d-inline-block align-text-top ms-5">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,7 +44,7 @@
                      <a class="nav-link" href="produk.php">PRODUK</a>
                   </li>
                   <li class="nav-item ms-3">
-                     <a class="nav-link active" style="color: #E84242;" href="blog.html">BLOG</a>
+                     <a class="nav-link active" style="color: #E84242;" href="blog.php">BLOG</a>
                   </li>
                   <li class="nav-item mx-3">
                      <a class="nav-link" href="about.php">TENTANG KAMI</a>
@@ -88,7 +88,17 @@
             ?>
             <a href="post_detail.php?id=<?=$article['id'] ?>" style="text-decoration: none;">
                 <div class="card" style="width: 18rem; height: fit-content;">
-                  <img src="../img/<?= $article['gambar'] ?>" class="card-img-top" alt="...">
+                  <?php
+                     if($article['gambar'] == '') {
+                  ?>                           
+                        <img src="../img//no-image.png" style="width: 10rem;" class="card-img-top mx-auto" alt="...">
+                  <?php                           
+                     } else { 
+                  ?>
+                        <img src="../img/<?= $article['gambar'] ?>" class="card-img-top" alt="<?= $article['judul'] ?>">
+                  <?php
+                     }
+                  ?>
                     <div class="card-body">
                         <p class="card-text"><?= $article['judul'] ?></p>
                         <p class="card-text" style="display: flex; justify-content: space-between; font-size: .8em;"><span><?= $article['penulis'] ?></span> <span><?= $article['tanggal'] ?></span></p>

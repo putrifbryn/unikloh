@@ -53,7 +53,7 @@ if (isset($_POST['komentar'])) {
       <!-- NAV -->
       <nav class="navbar navbar-expand-lg" style="background-color: #fff; position: fixed; top: 0; width: 100%; z-index: 9999;">
         <div class="container-fluid" style="justify-content: space-between;">
-           <a class="navbar-brand" href="../index.html">
+           <a class="navbar-brand" href="index.php">
            <img src="../img/UNIKLOH.svg" alt="Logo" width="90" height="24" class="d-inline-block align-text-top ms-5">
            </a>
            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -109,7 +109,17 @@ if (isset($_POST['komentar'])) {
             ?>
                 <h2 class="header-artikel"><?= $data['judul']; ?></h2>
                 <p style="text-align: center; margin: 0; margin-top: .5rem;"><?= $data['tanggal']; ?> • <?= $data['penulis']; ?></p>
-                <img class="gambar-artikel" src="../img/<?= $data['gambar']; ?>" alt="<?= $data['judul']; ?>">
+                <?php
+                    if($data['gambar'] == '') {
+                ?>                           
+                    <img src="../img/no-image.png" style="width: 12rem" alt="" class="d-block my-3 mx-auto">
+                <?php                           
+                    } else { 
+                ?>
+                    <img class="gambar-artikel" src="../img/<?= $data['gambar']; ?>" alt="<?= $data['judul']; ?>">
+                <?php
+                    }
+                ?>
                 <p><?= nl2br($data['isi']); ?></p>
             <?php 
                     }
