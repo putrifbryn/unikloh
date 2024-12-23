@@ -17,20 +17,28 @@ if (isset($_POST['submit'])) {
     $source = $_FILES['gambar']['tmp_name'];
     $folder = '../img/' . $photo;
 
-    if (move_uploaded_file($source, $folder)) {
+    move_uploaded_file($source, $folder);
+
+    if ($photo == "") {
+        $sql = "INSERT INTO produk (nama, harga, jenis) VALUES ('$nproduk', '$hproduk', '$jproduk')";
+
+        if (mysqli_query($conn, $sql)) {
+            echo "<script> alert ('Data berhasil ditambahkan') </script>";
+            header("refresh:1; ../admin-page/stok.php");
+        } else {
+            echo "<script> alert ('Data gagal ditambahkan') </script>";
+            header("refresh:1; ../admin-page/stok.php");
+        }
+    } else {
         $sql = "INSERT INTO produk (gambar, nama, harga, jenis) VALUES ('$photo', '$nproduk', '$hproduk', '$jproduk')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "<script> alert('Data Telah Berhasil ditambahkan'); </script>";
-            header("refresh:1; url=../admin-page/stok.php");
-            exit;
+            echo "<script> alert ('Data berhasil ditambahkan') </script>";
+            header("refresh:1; ../admin-page/stok.php");
         } else {
-            echo "<script> alert('Data Gagal ditambahkan'); </script>";
-            header("refresh:1; url=../admin-page/stok.php");
-            exit;
+            echo "<script> alert ('Data gagal ditambahkan') </script>";
+            header("refresh:1; ../admin-page/stok.php");
         }
-    } else {
-        echo "<script> alert('Foto gagal diupload'); </script>";
     }
 }
 ?>

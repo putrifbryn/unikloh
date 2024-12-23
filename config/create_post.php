@@ -18,19 +18,6 @@
         $source = $_FILES['gambar']['tmp_name'];
         $folder = '../img/' . $photo;
 
-        // if (move_uploaded_file($source, $folder)) {
-        //     $sql = "INSERT INTO artikel (gambar, judul, penulis, isi, tanggal) VALUES ('$photo', '$judul', '$penulis', '$isi', '$tanggal')";
-
-        //     if (mysqli_query($conn, $sql)) {
-        //         echo "<script> alert('Artikel berhasil ditambahkan'); </script>";
-        //         header("refresh:1; ../admin-page/post.php");
-        //     } else {
-        //         echo "<script> alert('Artikel gagal ditambahkan'); </script>";
-        //     }
-        // } else {
-        //     echo "<script> alert('Gagal mengupload gambar'); </script>";
-        // }
-
         if ($photo == "") {
             $sql = "INSERT INTO artikel (judul, penulis, isi, tanggal) VALUES ('$judul', '$penulis', '$isi', '$tanggal')";
 

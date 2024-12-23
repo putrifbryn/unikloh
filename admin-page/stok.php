@@ -7,7 +7,7 @@
       exit();
   }
 
-   $datas = mysqli_query($conn, "SELECT * FROM produk");
+   $datas = mysqli_query($conn, "SELECT * FROM produk ORDER BY id_produk DESC");
    $komens = mysqli_query($conn, "SELECT * FROM komen_artikel");
    ?>
 <!DOCTYPE html>
@@ -140,7 +140,19 @@
                         ?>
                      <tr>
                         <td><?= $no ?></td>
-                        <td><img src="../img/<?= $data['gambar'] ?>" style="width: 5rem" alt="" class="mb-3"></td>
+                        <td>
+                           <?php
+                              if($data['gambar'] == '') {
+                           ?>                           
+                              <img src="../img/no-image.png" style="width: 5rem" alt="" class="mb-3">
+                           <?php                           
+                              } else { 
+                           ?>
+                              <img src="../img/<?= $data['gambar'] ?>" style="width: 5rem" alt="" class="mb-3">
+                           <?php
+                              }
+                           ?>
+                        </td>
                         <td><?= $data['nama'] ?></td>
                         <td><?= $data['harga'] ?></td>
                         <td><?= $data['jenis'] ?></td>
