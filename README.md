@@ -35,7 +35,7 @@ Untuk menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
 ## Installation
 1.  #### Clone repositori:
     ```bash
-    https://github.com/putrifbryn/unikloh.git
+    git clone https://github.com/putrifbryn/unikloh.git
     ```
     
 2. #### Konfigurasi database:
